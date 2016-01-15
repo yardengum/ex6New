@@ -1,12 +1,18 @@
-.toolBar{
 
+.toolBar{
+    -fx-background-color: #a9a9a9 , grey , grey;
+    -fx-background-size: cover;
 }
 
-
 .applicationLogo{
- -fx-background-image: url("file:images/cinemaCity.jpg");
- -fx-background-size: cover;
- -fx-padding:50
+ -fx-background-image: url("file:images/cinemaCity.png");
+ -fx-background-size: 81 69;
+}
+
+.searchBtn {
+     -fx-background-image: url("file:images/magnefineGlass.png");
+     
+
 }
 
 .btnToolBar{

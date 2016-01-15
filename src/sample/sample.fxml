@@ -10,28 +10,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane alignment="CENTER" hgap="10.0" prefHeight="543.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="543.0" styleClass="applicationLogo" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.mainController">
   <children>
     <BorderPane prefHeight="608.0" prefWidth="888.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <top>
         <HBox prefHeight="100.0" prefWidth="200.0" styleClass="toolBar">
           <children>
-            <ImageView fx:id="btnLogoApp" fitHeight="72.16617036164315" fitWidth="138.87791442871094" pickOnBounds="true" preserveRatio="true" styleClass="applicationLogo">
-              <image>
-                <Image url="@../../../../Downloads/cinemaCity.png" />
-              </image>
+            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="81.0" text="">
               <HBox.margin>
                 <Insets left="5.0" top="5.0" />
               </HBox.margin>
-            </ImageView>
+            </Button>
             <TextField fx:id="btnTextInput" prefHeight="29.0" prefWidth="256.0" promptText="Please enter movie or professional id" styleClass="txt">
               <HBox.margin>
                 <Insets left="15.0" top="5.0" />
               </HBox.margin>
             </TextField>
-            <MenuButton fx:id="btnMultiChoices" mnemonicParsing="false" styleClass="btnToolBar" text="MenuButton">
+            <MenuButton fx:id="btnMultiChoices" cache="false" mnemonicParsing="false" pickOnBounds="false" popupSide="BOTTOM" prefHeight="29.0" prefWidth="126.0" styleClass="btnToolBar" text="MenuButton">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <RadioMenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
               <items>
-                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Professional by movie" />
+                <MenuItem id="menuBtn" mnemonicParsing="false" styleClass="btnToolBar, txt" text="Professional by movie" />
                 <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movie by id" />
                 <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movies by professional id" />
               </items>
@@ -39,22 +44,35 @@
                 <Insets left="20.0" right="15.0" top="5.0" />
               </HBox.margin>
             </MenuButton>
-            <Button fx:id="btnSearch" mnemonicParsing="false" styleClass="btnToolBar" text="?">
+            <Button fx:id="btnRemove" mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="33.0" styleClass="btnToolBar" text="-">
               <HBox.margin>
-                <Insets right="15.0" top="5.0" fx:id="x1" />
+                <Insets left="5.0" right="10.0" top="5.0" />
               </HBox.margin>
             </Button>
-            <Button fx:id="btnRemove" mnemonicParsing="false" styleClass="btnToolBar" text="-" HBox.margin="$x1" />
-            <Button fx:id="btnAdd" mnemonicParsing="false" styleClass="btnToolBar" text="+">
+            <Button mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="">
               <HBox.margin>
-                <Insets left="60.0" right="15.0" top="5.0" />
+                <Insets top="5.0" />
               </HBox.margin>
             </Button>
-            <Button fx:id="btnAll" mnemonicParsing="false" styleClass="btnToolBar" text="All">
+            <ImageView fitHeight="28.566574694870095" fitWidth="28.694103240966797" pickOnBounds="true" preserveRatio="true">
               <HBox.margin>
-                <Insets left="60.0" top="5.0" />
+                <Insets top="5.0" />
               </HBox.margin>
-            </Button>
+            </ImageView>
+            <HBox prefHeight="100.0" prefWidth="227.0">
+              <children>
+                <Button mnemonicParsing="false" prefHeight="28.566574096679688" text="+">
+                  <HBox.margin>
+                    <Insets left="10.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="28.566574096679688" text="All">
+                  <HBox.margin>
+                    <Insets left="80.0" top="5.0" />
+                  </HBox.margin>
+                </Button>
+              </children>
+            </HBox>
           </children>
           <BorderPane.margin>
             <Insets />
