@@ -11,7 +11,7 @@
 
 .searchBtn {
      -fx-background-image: url("file:images/magnefineGlass.png");
-     
+     /***/
 
 }
 
