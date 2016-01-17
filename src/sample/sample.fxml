@@ -96,8 +96,8 @@
                   <contextMenu>
                     <ContextMenu>
                       <items>
-                        <MenuItem mnemonicParsing="false" text="Movie" />
-                        <MenuItem mnemonicParsing="false" text="Professional" />
+                        <MenuItem mnemonicParsing="false" text="Movie" fx:id="AllMovie" />
+                        <MenuItem mnemonicParsing="false" text="Professional" fx:id="AllProf" />
                       </items>
                     </ContextMenu>
                   </contextMenu>

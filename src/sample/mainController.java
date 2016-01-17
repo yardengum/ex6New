@@ -13,6 +13,9 @@ import java.io.IOException;
 public class mainController {
 
     @FXML
+    Button All;
+
+    @FXML
     Button photo;
 
     @FXML
