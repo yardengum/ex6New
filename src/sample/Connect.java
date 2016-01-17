@@ -6,7 +6,7 @@ import java.net.Socket;
 /**
  * Created by demo on 1/15/16.
  */
-public class conect {
+public class Connect {
 
     private static Socket socket = null;
 

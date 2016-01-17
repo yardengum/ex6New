@@ -21,7 +21,6 @@ public class PlusMovieWindow {
         stage.setScene(scene);
         stage.show();
     }
-    public void recMsg(String msg) throws IOException {
 
-    }
+
 }

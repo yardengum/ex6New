@@ -16,6 +16,7 @@
       <center>
         <VBox prefHeight="200.0" prefWidth="100.0">
           <children>
+            <TextField fx:id="operateAddMovie" prefWidth="200.0" promptText="operation" />
             <TextField fx:id="id" prefWidth="200.0" promptText="id" />
             <TextField fx:id="name" prefWidth="200.0" promptText="name" />
             <TextField fx:id="length" prefWidth="200.0" promptText="length" />

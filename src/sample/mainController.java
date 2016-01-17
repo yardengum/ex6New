@@ -27,60 +27,12 @@ public class mainController {
     @FXML
     MenuItem minusProf;
 
-
-
-
-
     @FXML
-    Button addBtn;
+    TextField btnTextInput;
 
-    @FXML
-    TextField id;
 
-    @FXML
-    TextField name;
 
-    @FXML
-    TextField length;
 
-    @FXML
-    TextField year;
-
-    @FXML
-    TextField rating;
-
-    @FXML
-    TextField description;
-
-    @FXML
-    Button addProfBtn;
-
-    @FXML
-    TextField type;
-
-    @FXML
-    TextField idProfessional;
-
-    @FXML
-    TextField age;
-
-    @FXML
-    TextField descProf;
-
-    @FXML
-    TextField gender;
-
-    @FXML
-    TextField profName;
-
-    @FXML
-    Button removeMovieBtn;
-
-    @FXML
-    TextField operateDelete;
-
-    @FXML
-    TextField movieIdDelete;
 
 
 
@@ -114,6 +66,7 @@ public class mainController {
                 }
             }
         });
+
 
 
     /*    btnRemove.setOnAction(new EventHandler<ActionEvent>() {
