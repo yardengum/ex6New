@@ -13,10 +13,17 @@
 <GridPane alignment="CENTER" hgap="10.0" prefHeight="543.0" styleClass="applicationLogo" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.mainController">
   <children>
     <BorderPane prefHeight="608.0" prefWidth="888.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <center>
+        <ScrollPane fx:id="scrollShow" prefHeight="443.0" prefWidth="547.0">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+          </content>
+        </ScrollPane>
+      </center>
       <top>
         <HBox prefHeight="100.0" prefWidth="200.0" styleClass="toolBar">
           <children>
-            <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="81.0" text="">
+            <Button fx:id="photo" mnemonicParsing="false" prefHeight="69.0" prefWidth="81.0" text="">
               <HBox.margin>
                 <Insets left="5.0" top="5.0" />
               </HBox.margin>
@@ -44,31 +51,58 @@
                 <Insets left="20.0" right="15.0" top="5.0" />
               </HBox.margin>
             </MenuButton>
+            <Button mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="?">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Movie" />
+                    <MenuItem mnemonicParsing="false" text="Professional" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
+              <HBox.margin>
+                <Insets top="5.0" />
+              </HBox.margin>
+            </Button>
             <Button fx:id="btnRemove" mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="33.0" styleClass="btnToolBar" text="-">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Movie" fx:id="minusMovie" />
+                    <MenuItem mnemonicParsing="false" text="Professional" fx:id="minusProf" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
               <HBox.margin>
                 <Insets left="5.0" right="10.0" top="5.0" />
               </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="">
-              <HBox.margin>
-                <Insets top="5.0" />
-              </HBox.margin>
-            </Button>
-            <ImageView fitHeight="28.566574694870095" fitWidth="28.694103240966797" pickOnBounds="true" preserveRatio="true">
-              <HBox.margin>
-                <Insets top="5.0" />
-              </HBox.margin>
-            </ImageView>
             <HBox prefHeight="100.0" prefWidth="227.0">
               <children>
-                <Button mnemonicParsing="false" prefHeight="28.566574096679688" text="+">
+                <Button fx:id="plusBtn" mnemonicParsing="false" prefHeight="28.566574096679688" text="+">
+                  <contextMenu>
+                    <ContextMenu>
+                      <items>
+                        <MenuItem mnemonicParsing="false" text="Movie" fx:id="plusMovie" />
+                        <MenuItem mnemonicParsing="false" text="Professional" fx:id="plusProf" />
+                      </items>
+                    </ContextMenu>
+                  </contextMenu>
                   <HBox.margin>
                     <Insets left="10.0" right="5.0" top="5.0" />
                   </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" prefHeight="28.566574096679688" text="All">
+                <Button fx:id="AllBtn" mnemonicParsing="false" text="All">
+                  <contextMenu>
+                    <ContextMenu>
+                      <items>
+                        <MenuItem mnemonicParsing="false" text="Movie" />
+                        <MenuItem mnemonicParsing="false" text="Professional" />
+                      </items>
+                    </ContextMenu>
+                  </contextMenu>
                   <HBox.margin>
-                    <Insets left="80.0" top="5.0" />
+                    <Insets top="5.0" />
                   </HBox.margin>
                 </Button>
               </children>
