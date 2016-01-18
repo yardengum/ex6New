@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="543.0" styleClass="applicationLogo" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.mainController">
+  <children>
+    <BorderPane prefHeight="608.0" prefWidth="888.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <center>
+        <ScrollPane fx:id="scrollShow" prefHeight="443.0" prefWidth="547.0">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+          </content>
+        </ScrollPane>
+      </center>
+      <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="toolBar">
+          <children>
+            <Button fx:id="photo" mnemonicParsing="false" prefHeight="69.0" prefWidth="81.0" styleClass="applicationLogo" text="">
+              <graphic>
+                <ImageView fx:id="photoLogo" fitHeight="83.25" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" styleClass="applicationLogo" />
+              </graphic>
+              <HBox.margin>
+                <Insets left="5.0" top="5.0" />
+              </HBox.margin>
+            </Button>
+            <TextField fx:id="btnTextInput" prefHeight="29.0" prefWidth="256.0" promptText="Please enter movie or professional id" styleClass="txt">
+              <HBox.margin>
+                <Insets left="15.0" top="5.0" />
+              </HBox.margin>
+            </TextField>
+            <MenuButton fx:id="btnMultiChoices" cache="false" mnemonicParsing="false" pickOnBounds="false" popupSide="BOTTOM" prefHeight="29.0" prefWidth="126.0" styleClass="btnToolBar" text="MenuButton">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <RadioMenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Professional by movie" fx:id="profByMovie" />
+                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movie by id" fx:id="movieById" />
+                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movies by professional id" fx:id="MovieByProfId" />
+              </items>
+              <HBox.margin>
+                <Insets left="20.0" right="15.0" top="5.0" />
+              </HBox.margin>
+            </MenuButton>
+            <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="?">
+            <Button fx:id="searchPhoto" minHeight="28.999900000002526" minWidth="33.0" mnemonicParsing="false" prefHeight="28.999900000002526" prefWidth="33.0" styleClass="searchBtn" text="?">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Movie" />
+                    <MenuItem mnemonicParsing="false" text="Professional" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
+              <graphic>
+                <ImageView fitHeight="29.25" fitWidth="39.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" />
+              </graphic>
+              <HBox.margin>
+                <Insets top="5.0" />
+              </HBox.margin>
+            </Button>
+            <Button fx:id="btnRemove" mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="33.0" styleClass="btnToolBar" text="-">
+              <contextMenu>
+                <ContextMenu>
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Movie" fx:id="minusMovie" />
+                    <MenuItem mnemonicParsing="false" text="Professional" fx:id="minusProf" />
+                  </items>
+                </ContextMenu>
+              </contextMenu>
+              <HBox.margin>
+                <Insets left="5.0" right="10.0" top="5.0" />
+              </HBox.margin>
+            </Button>
+            <HBox prefHeight="100.0" prefWidth="227.0">
+              <children>
+                <Button fx:id="plusBtn" mnemonicParsing="false" prefHeight="28.566574096679688" text="+">
+                  <contextMenu>
+                    <ContextMenu>
+                      <items>
+                        <MenuItem mnemonicParsing="false" text="Movie" fx:id="plusMovie" />
+                        <MenuItem mnemonicParsing="false" text="Professional" fx:id="plusProf" />
+                      </items>
+                    </ContextMenu>
+                  </contextMenu>
+                  <HBox.margin>
+                    <Insets left="10.0" right="5.0" top="5.0" />
+                  </HBox.margin>
+                </Button>
+                <Button fx:id="AllBtn" mnemonicParsing="false" text="All">
+                  <contextMenu>
+                    <ContextMenu>
+                      <items>
+                        <MenuItem mnemonicParsing="false" text="Movie" fx:id="AllMovie" />
+                        <MenuItem mnemonicParsing="false" text="Professional" fx:id="AllProf" />
+                      </items>
+                    </ContextMenu>
+                  </contextMenu>
+                  <HBox.margin>
+                    <Insets top="5.0" />
+                  </HBox.margin>
+                </Button>
+              </children>
+            </HBox>
+          </children>
+          <BorderPane.margin>
+            <Insets />
+          </BorderPane.margin>
+        </HBox>
+      </top>
+    </BorderPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
