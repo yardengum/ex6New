@@ -8,7 +8,7 @@ import java.net.Socket;
  */
 public class Connect {
 
-    private static Socket socket = null;
+    private static Socket socket;
 
     public static Socket getSock(){
         return socket;

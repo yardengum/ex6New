@@ -17,7 +17,7 @@ public class ProfOfMovie {
             out.println(fromUser);
             String fromServer="";
             String str;
-            while ((str = in.readLine()) != null){
+            while (in.ready()&&(str = in.readLine()) != null){
                 fromServer = fromServer +  str +'\n';
             }
             return fromServer;

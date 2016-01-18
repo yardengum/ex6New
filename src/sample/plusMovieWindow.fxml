@@ -9,14 +9,14 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
 
 <GridPane alignment="CENTER" hgap="10.0" prefHeight="383.0" prefWidth="442.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.plusMovieController">
   <children>
     <BorderPane prefHeight="543.0" prefWidth="520.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <center>
-        <VBox prefHeight="200.0" prefWidth="100.0">
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
           <children>
-            <TextField fx:id="operateAddMovie" prefWidth="200.0" promptText="operation" />
             <TextField fx:id="id" prefWidth="200.0" promptText="id" />
             <TextField fx:id="name" prefWidth="200.0" promptText="name" />
             <TextField fx:id="length" prefWidth="200.0" promptText="length" />
@@ -28,7 +28,18 @@
         </VBox>
       </center>
       <top>
-        <HBox prefHeight="100.0" prefWidth="200.0" />
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="8.0" prefHeight="43.0" prefWidth="173.0" text="ADD MOVIE" textAlignment="CENTER" textFill="#ff3d00">
+              <font>
+                <Font size="23.0" />
+              </font>
+              <HBox.margin>
+                <Insets bottom="50.0" right="50.0" top="50.0" />
+              </HBox.margin>
+            </Label>
+          </children>
+        </HBox>
       </top>
     </BorderPane>
   </children>

@@ -14,20 +14,26 @@
   <children>
     <BorderPane prefHeight="543.0" prefWidth="520.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <center>
-        <VBox prefHeight="200.0" prefWidth="100.0">
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
           <children>
+            <Label alignment="TOP_LEFT" minHeight="14.0" prefHeight="40.0" prefWidth="414.0" text="INSERT PROFESSIONAL TYPE:" />
+            <Label alignment="TOP_LEFT" minHeight="14.0" prefHeight="40.0" prefWidth="414.0" text="0 for Director,1 for Actor,2 for Writer and 3 for Producer" />
             <TextField fx:id="type" prefWidth="200.0" promptText="type" />
             <TextField fx:id="idProfessional" prefWidth="200.0" promptText="professional id" />
             <TextField fx:id="age" prefWidth="200.0" promptText="age" text="" />
             <TextField fx:id="descProf" prefWidth="200.0" promptText="specific-desc" />
             <TextField fx:id="gender" prefWidth="200.0" promptText="gender" />
             <TextField fx:id="profName" prefWidth="200.0" promptText="professional name" />
-            <Button fx:id="addProfBtn" mnemonicParsing="false" text="add" />
+            <Button fx:id="addBtn" mnemonicParsing="false" text="add" />
           </children>
         </VBox>
       </center>
       <top>
-        <HBox prefHeight="100.0" prefWidth="200.0" />
+        <HBox prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="73.0" prefWidth="260.0" text="ADD PROFESSIONAL" textAlignment="CENTER" textFill="#ff3d00" />
+          </children>
+        </HBox>
       </top>
     </BorderPane>
   </children>

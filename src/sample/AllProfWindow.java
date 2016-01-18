@@ -17,7 +17,7 @@ public class AllProfWindow {
             out.println(fromUser);
             String str = "";
             String fromServer;
-            while ((fromServer = in.readLine()) != null) {
+            while (in.ready()&&(fromServer = in.readLine()) != null) {
                 str = str + fromServer + '\n';
             }
             return str;
