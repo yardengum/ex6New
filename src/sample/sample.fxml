@@ -16,7 +16,11 @@
       <center>
         <ScrollPane fx:id="scrollShow" prefHeight="443.0" prefWidth="547.0">
           <content>
-            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="output" prefHeight="428.0" prefWidth="817.0" scaleX="1.0" wrapText="true">
+              <rotationAxis>
+                <Point3D z="1.0" />
+              </rotationAxis>
+            </TextArea>
           </content>
         </ScrollPane>
       </center>
@@ -33,7 +37,7 @@
                 <Insets left="15.0" top="5.0" />
               </HBox.margin>
             </TextField>
-            <MenuButton fx:id="btnMultiChoices" cache="false" mnemonicParsing="false" pickOnBounds="false" popupSide="BOTTOM" prefHeight="29.0" prefWidth="126.0" styleClass="btnToolBar" text="MenuButton">
+            <MenuButton fx:id="btnMultiChoices" cache="false" mnemonicParsing="false" pickOnBounds="false" popupSide="BOTTOM" prefHeight="29.0" prefWidth="150.0" styleClass="btnToolBar" text="Menu Button">
               <contextMenu>
                 <ContextMenu>
                   <items>
@@ -43,15 +47,15 @@
                 </ContextMenu>
               </contextMenu>
               <items>
-                <MenuItem id="menuBtn" mnemonicParsing="false" styleClass="btnToolBar, txt" text="Professional by movie" />
-                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movie by id" />
-                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movies by professional id" />
+                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Professional by movie" fx:id="profByMovie" />
+                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movie by id" fx:id="movieById" />
+                <MenuItem mnemonicParsing="false" styleClass="btnToolBar, txt" text="Movies by professional id" fx:id="MovieByProfId" />
               </items>
               <HBox.margin>
                 <Insets left="20.0" right="15.0" top="5.0" />
               </HBox.margin>
             </MenuButton>
-            <Button mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="?">
+            <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="?">
               <contextMenu>
                 <ContextMenu>
                   <items>

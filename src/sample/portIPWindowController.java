@@ -32,7 +32,7 @@ public class portIPWindowController {
             public void handle(MouseEvent event) {
                 int portTo = Integer.parseInt(port.getText());
                 try {
-                    conect.setSock(portTo,ip.getText());
+                    Connect.setSock(portTo,ip.getText());
                     Stage stage = (Stage) save.getScene().getWindow();
                     stage.close();
                 } catch (IOException e) {
