@@ -19,8 +19,8 @@ import java.io.PrintWriter;
 public class AllMovieWindow {
     String show() throws IOException {
 
-            PrintWriter out = new PrintWriter(conect.getSock().getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(conect.getSock().getInputStream()));
+            PrintWriter out = new PrintWriter(Connect.getSock().getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(Connect.getSock().getInputStream()));
             String fromUser = "13";
             out.println(fromUser);
         String str = "";

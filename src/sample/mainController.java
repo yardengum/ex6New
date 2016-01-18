@@ -34,12 +34,6 @@ public class mainController {
     TextField btnTextInput;
 
 
-
-
-
-
-
-
     @FXML
     void initialize() {
         photo.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -116,12 +110,9 @@ public class mainController {
             @Override
             public void handle(ActionEvent event) {
                 MinusMovieWindow deleteMovie = new MinusMovieWindow();
-                try {
-                    deleteMovie.show();
+                String str="";
+                deleteMovie.show(str);
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
         });
 
@@ -130,13 +121,10 @@ public class mainController {
             @Override
             public void handle(ActionEvent event) {
                 MinusProfWindow deleteProf = new MinusProfWindow();
-                try {
-                    deleteProf.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                String str = "";
+                deleteProf.show(str);
             }
+
         });
 
 

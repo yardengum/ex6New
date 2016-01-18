@@ -11,8 +11,8 @@ import java.io.PrintWriter;
 public class AllProfWindow {
         String show() throws IOException {
 
-            PrintWriter out = new PrintWriter(conect.getSock().getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(conect.getSock().getInputStream()));
+            PrintWriter out = new PrintWriter(Connect.getSock().getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(Connect.getSock().getInputStream()));
             String fromUser = "14";
             out.println(fromUser);
             String str = "";
