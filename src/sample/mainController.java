@@ -31,29 +31,15 @@ public class mainController {
     @FXML
     TextField btnTextInput;
 
-    @FXML
-    MenuItem AllMovie;
-    @FXML
-    MenuItem AllProf;
+
+
+
+
+
+
 
     @FXML
-    Button searchBtn;
-    @FXML
-    MenuButton btnMultiChoices;
-    @FXML
-    MenuItem profByMovie;
-    @FXML
-    MenuItem movieById;
-    @FXML
-    MenuItem MovieByProfId;
-    @FXML
-    TextArea output;
-    @FXML
-    ScrollPane scrollShow;
-    @FXML
     void initialize() {
-        output.setEditable(false);
-        scrollShow.setContent(output);
         photo.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -128,9 +114,12 @@ public class mainController {
             @Override
             public void handle(ActionEvent event) {
                 MinusMovieWindow deleteMovie = new MinusMovieWindow();
-               deleteMovie.show(btnTextInput.getText());
+                try {
+                    deleteMovie.show();
 
-
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -139,8 +128,12 @@ public class mainController {
             @Override
             public void handle(ActionEvent event) {
                 MinusProfWindow deleteProf = new MinusProfWindow();
-                deleteProf.show(btnTextInput.getText());
+                try {
+                    deleteProf.show();
 
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -156,76 +149,6 @@ public class mainController {
                 }
             }
         });
-        AllMovie.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                AllMovieWindow allmovieWin = new AllMovieWindow();
-                try {
-                    String outputTo = allmovieWin.show();
-                    output.setText(outputTo);
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        AllProf.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                AllProfWindow allProfWin = new AllProfWindow();
-                try {
-                    String outputTo = allProfWin.show();
-                    output.setText(outputTo);
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        profByMovie.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-             btnMultiChoices.setText(profByMovie.getText());
-            }
-        });
-        movieById.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                btnMultiChoices.setText(movieById.getText());
-            }
-        });
-        MovieByProfId.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                btnMultiChoices.setText(MovieByProfId.getText());
-            }
-        });
-        searchBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-
-                String ProfOfMovie = profByMovie.getText();
-                String MovieItem = movieById.getText();
-                String movieByAProf = MovieByProfId.getText();
-                String choice  = btnMultiChoices.getText();
-                String str="";
-                if(choice == ProfOfMovie)  {
-                    ProfOfMovie profMov = new ProfOfMovie();
-                    str = profMov.show(choice);
-                }
-                else if(choice==MovieItem) {
-                    MovieByIdWindow aMovie = new MovieByIdWindow();
-                    str =aMovie.show(choice);
-                }
-                else if(choice==movieByAProf) {
-                    MoviesByProf profIdMov = new MoviesByProf();
-                    str = profIdMov.show(choice);
-                }
-                btnMultiChoices.setText("Menu Button");
-                output.setText(str);
-                }
-
-            });
 
     }
 

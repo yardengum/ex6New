@@ -16,18 +16,17 @@
       <center>
         <ScrollPane fx:id="scrollShow" prefHeight="443.0" prefWidth="547.0">
           <content>
-            <TextArea fx:id="output" prefHeight="428.0" prefWidth="817.0" scaleX="1.0" wrapText="true">
-              <rotationAxis>
-                <Point3D z="1.0" />
-              </rotationAxis>
-            </TextArea>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
           </content>
         </ScrollPane>
       </center>
       <top>
         <HBox prefHeight="100.0" prefWidth="200.0" styleClass="toolBar">
           <children>
-            <Button fx:id="photo" mnemonicParsing="false" prefHeight="69.0" prefWidth="81.0" text="">
+            <Button fx:id="photo" mnemonicParsing="false" prefHeight="69.0" prefWidth="81.0" styleClass="applicationLogo" text="">
+              <graphic>
+                <ImageView fx:id="photoLogo" fitHeight="83.25" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" styleClass="applicationLogo" />
+              </graphic>
               <HBox.margin>
                 <Insets left="5.0" top="5.0" />
               </HBox.margin>
@@ -37,7 +36,7 @@
                 <Insets left="15.0" top="5.0" />
               </HBox.margin>
             </TextField>
-            <MenuButton fx:id="btnMultiChoices" cache="false" mnemonicParsing="false" pickOnBounds="false" popupSide="BOTTOM" prefHeight="29.0" prefWidth="150.0" styleClass="btnToolBar" text="Menu Button">
+            <MenuButton fx:id="btnMultiChoices" cache="false" mnemonicParsing="false" pickOnBounds="false" popupSide="BOTTOM" prefHeight="29.0" prefWidth="126.0" styleClass="btnToolBar" text="MenuButton">
               <contextMenu>
                 <ContextMenu>
                   <items>
@@ -56,6 +55,7 @@
               </HBox.margin>
             </MenuButton>
             <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="28.566574096679688" prefWidth="28.694091796875" styleClass="searchBtn" text="?">
+            <Button fx:id="searchPhoto" minHeight="28.999900000002526" minWidth="33.0" mnemonicParsing="false" prefHeight="28.999900000002526" prefWidth="33.0" styleClass="searchBtn" text="?">
               <contextMenu>
                 <ContextMenu>
                   <items>
@@ -64,6 +64,9 @@
                   </items>
                 </ContextMenu>
               </contextMenu>
+              <graphic>
+                <ImageView fitHeight="29.25" fitWidth="39.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" />
+              </graphic>
               <HBox.margin>
                 <Insets top="5.0" />
               </HBox.margin>
